@@ -21,7 +21,7 @@
     <!--<bean id="personDao" class="cn.gs.dao.PersonDao"/>-->
     <!--<bean id="personService" class="cn.gs.service.PersonService"/>-->
 
-    <!--<context:component-scan base-package="cn.gs.aopService"/>-->
+    <context:component-scan base-package="cn.gs.aopService"/>
     <!--<bean id="beforeLog" class="cn.gs.aopService.BeforeLog"/>-->
     <!--<bean id="afterLog" class="cn.gs.aopService.AfterLog"/>-->
     <!--<bean id="log" class="cn.gs.aopService.Log"/>-->
@@ -32,19 +32,21 @@
     <!--<aop:advisor advice-ref="afterLog" pointcut-ref="pointcut"/>-->
     <!--</aop:config>-->
 
-    <!--<aop:aspectj-autoproxy/>-->
-    <!--<bean id="greetingAdvice" class="cn.gs.service.GreetingAdvice"/>-->
-    <!--<bean id="greetingAdvisor" class="org.springframework.aop.support.RegexpMethodPointcutAdvisor">-->
-        <!--<property name="advice" ref="greetingAdvice"/>-->
-        <!--<property name="pattern" value="cn.gs.service.GreetingImpl."/>-->
-    <!--</bean>-->
+    <aop:aspectj-autoproxy/>
+    <bean id="greetingAdvice" class="cn.gs.service.GreetingAdvice"/>
+    <bean id="greetingAdvisor" class="org.springframework.aop.support.RegexpMethodPointcutAdvisor">
+        <property name="advice" ref="greetingAdvice"/>
+        <property name="pattern" value="cn.gs.service.GreetingImpl."/>
+    </bean>
 
-    <!--<bean id="greetinImpl" class="cn.gs.service.GreetingImpl"/>-->
-    <!--<bean id="greetingProxy" class="org.springframework.aop.framework.ProxyFactoryBean">-->
-        <!--<property name="interfaces" value="cn.gs.service.Greeting"/>-->
-        <!--<property name="target" ref="greetinImpl"/>-->
-        <!--<property name="interceptorNames" value="greetingAdvice"/>-->
-    <!--</bean>-->
+<!--
+    <bean id="greetinImpl" class="cn.gs.service.GreetingImpl"/>
+    <bean id="greetingProxy" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="interfaces" value="cn.gs.service.Greeting"/>
+        <property name="target" ref="greetinImpl"/>
+        <property name="interceptorNames" value="greetingAdvice"/>
+    </bean>
+-->
 
     <bean id="helloDao" class="cn.gs.dao.HelloDao"
           init-method="setUp" destroy-method="destory"/>

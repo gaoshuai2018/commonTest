@@ -11,6 +11,7 @@
     <modules>
         <module>springTest</module>
         <module>usuallyProject</module>
+        <module>webProject</module>
     </modules>
 
 
