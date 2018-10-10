@@ -36,7 +36,7 @@
     <bean id="greetingAdvice" class="cn.gs.service.GreetingAdvice"/>
     <bean id="greetingAdvisor" class="org.springframework.aop.support.RegexpMethodPointcutAdvisor">
         <property name="advice" ref="greetingAdvice"/>
-        <property name="pattern" value="cn.gs.service.GreetingImpl."/>
+        <property name="pattern" value="cn.gs.cn.gs.service.GreetingImpl."/>
     </bean>
 
 <!--

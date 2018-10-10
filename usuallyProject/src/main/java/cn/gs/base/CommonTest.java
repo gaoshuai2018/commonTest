@@ -5,6 +5,8 @@ import sun.misc.BASE64Decoder;
 
 import java.math.BigDecimal;
 import java.nio.charset.StandardCharsets;
+import java.text.DecimalFormat;
+import java.text.Format;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
@@ -44,6 +46,8 @@ public class CommonTest {
         List<String> stringList = new LinkedList<>();
         stringList.add("abc");
         System.out.println(stringList.size());
+        String string = "文件下载";
+        System.out.println(string.length());
     }
 
     @Test
@@ -85,6 +89,17 @@ public class CommonTest {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    @Test
+    public void numberFormatTest(){
+        int num = 1;
+
+        Format f1 = new DecimalFormat("000");
+        System.out.println(f1.format(num));
+
+        Format f2 = new DecimalFormat("00");
+        System.out.println(f2.format(num));
     }
 
 }

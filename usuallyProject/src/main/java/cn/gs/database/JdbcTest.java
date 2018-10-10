@@ -85,7 +85,7 @@ public class JdbcTest {
      */
     public  Map<String, Object> findSimpleResult(String sql, List<Object> params)
             throws SQLException {
-        Map<String, Object> map = new HashMap<String, Object>();
+        Map<String, Object> map = new HashMap<>();
         pstmt = connection.prepareStatement(sql);
         int index = 1;
         if (params != null && !params.isEmpty()) {
@@ -121,7 +121,7 @@ public class JdbcTest {
      */
     public List<Map<String, Object>> findMoreResult(String sql,
                                                     List<Object> params) throws SQLException {
-        List<Map<String, Object>> list = new ArrayList<Map<String, Object>>();
+        List<Map<String, Object>> list = new ArrayList<>();
         pstmt = connection.prepareStatement(sql);
         int index = 1; // 表示占位符
         if (params != null && !params.isEmpty()) {
@@ -133,7 +133,7 @@ public class JdbcTest {
         ResultSetMetaData metaData = resultSet.getMetaData(); // 获得列的结果
 
         while (resultSet.next()) {
-            Map<String, Object> map = new HashMap<String, Object>();
+            Map<String, Object> map = new HashMap<>();
             int cols_len = metaData.getColumnCount(); // 获取总的列数
             for (int i = 0; i < cols_len; i++) {
                 String col_name = metaData.getColumnName(i + 1); // 获取第 i列的字段名称

@@ -1,4 +1,4 @@
-package cn.gs.junior;
+package cn.gs.common;
 
 /**
  * @Author: gaoshuai
@@ -47,9 +47,6 @@ public class SheXingTest {
             }
         }
         if (dirction == 2) {
-            if (arr[colum][row] == 11) {
-                dirction = 2;
-            }
             columNew = colum + 1;
             if (columNew < arrColum && arrFlag[columNew][row] == 0) {
                 System.out.print(arr[columNew][row] + " ");

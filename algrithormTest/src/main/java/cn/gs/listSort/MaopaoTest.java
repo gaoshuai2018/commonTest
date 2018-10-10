@@ -1,13 +1,13 @@
-package cn.gs.junior;
+package cn.gs.listSort;
 
 /**
  * @Author: gaoshuai
- * @Date: 2018/5/16 15:54
+ * @Date: 2018/5/16 15:45
  * @Version 1.0
  */
-public class XuanZeTest {
+public class MaopaoTest {
     public static void main(String[] args) {
-        int[] arr = {6, 3, 8, 2, 9, 1, 12, 7};
+        int[] arr = {6, 3, 8, 2, 9, 1};
         System.out.println("排序前数组为：");
         for (int num : arr) {
             System.out.print(num + " ");
@@ -16,11 +16,11 @@ public class XuanZeTest {
         //外层循环控制排序趟数
         for (int i = 0; i < arr.length - 1; i++) {
             //内层循环控制每一趟排序多少次
-            for (int j = i + 1; j < arr.length; j++) {
-                if (arr[j] < arr[i]) {
+            for (int j = 0; j < arr.length - 1; j++) {
+                if (arr[j] > arr[j + 1]) {
                     int temp = arr[j];
-                    arr[j] = arr[i];
-                    arr[i] = temp;
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = temp;
                 }
             }
             System.out.print("第" + (i + 1) + "趟排序：");
@@ -33,6 +33,7 @@ public class XuanZeTest {
         System.out.println("排序后的数组为：");
         for (int num : arr) {
             System.out.print(num + " ");
+
         }
     }
 }

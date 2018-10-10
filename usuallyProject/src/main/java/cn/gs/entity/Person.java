@@ -10,8 +10,18 @@ import lombok.Data;
  */
 
 @Data
-public class Person {
+public class Person implements Comparable<Person> {
     private Long personId;
-    private  String personName;
-    private  String personDesc;
+    private String personName;
+    private String personDesc;
+
+    @Override
+    public int compareTo(Person o) {
+        if (personId > o.getPersonId()) {
+            return 1;
+        } else if (personId < o.getPersonId()) {
+            return -1;
+        }
+        return 0;
+    }
 }

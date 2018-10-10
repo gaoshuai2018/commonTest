@@ -1,4 +1,4 @@
-package cn.gs.junior;
+package cn.gs.listSort;
 
 /**
  * @Author: gaoshuai
