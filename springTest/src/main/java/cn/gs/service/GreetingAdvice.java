@@ -18,9 +18,9 @@ public class GreetingAdvice implements MethodBeforeAdvice, AfterReturningAdvice 
     public void afterReturning(Object returnValue, Method method,
                                Object[] args, Object target) throws Throwable {
         System.out.println("after");
-        List<Integer> l =  new ArrayList<Integer>();
+        List<Integer> l = new ArrayList<Integer>();
         for (int i = 0; i < l.size(); i++) {
-            
+
         }
     }
 

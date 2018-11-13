@@ -1,8 +1,6 @@
 package cn.gs.service;
 
 import cn.gs.dao.PersonDao;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 
@@ -28,11 +26,12 @@ public class PersonService {
         System.out.println("构造方法注入");
         this.personDao = personDao2;
     }
+
     public PersonService() {
         System.out.println("空的构造方法");
     }
 
-    public String selectPersonInfo(){
+    public String selectPersonInfo() {
         return personDao.selectPersonInfo();
     }
 }

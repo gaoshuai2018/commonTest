@@ -9,9 +9,8 @@ import lombok.Data;
  */
 @Data
 public class User {
+    private Long userId;
     private String userName;
-
     private Double userSalary;
 
-    private String userId;
 }

@@ -25,7 +25,7 @@ public class CommonTest {
     }
 
     @Test
-    public void charTest(){
+    public void charTest() {
         char ch = '点';
         System.out.println(ch);
     }
@@ -92,7 +92,7 @@ public class CommonTest {
     }
 
     @Test
-    public void numberFormatTest(){
+    public void numberFormatTest() {
         int num = 1;
 
         Format f1 = new DecimalFormat("000");
