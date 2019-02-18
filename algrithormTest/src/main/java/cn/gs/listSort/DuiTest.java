@@ -19,15 +19,13 @@ public class DuiTest {
         int child = 2 * parent + 1; // 先获得左孩子
 
         while (child < length) {
-            // 如果父结点的值已经大于孩子结点的值，则直接结束
-            if (temp >= array[child])
-                break;
-
             // 如果有右孩子结点，并且右孩子结点的值大于左孩子结点，则选取右孩子结点
             if (child + 1 < length && array[child] < array[child + 1]) {
                 child++;
             }
-
+            // 如果父结点的值已经大于孩子结点的值，则直接结束
+            if (temp >= array[child])
+                break;
 
             // 把孩子结点的值赋给父结点
             array[parent] = array[child];
