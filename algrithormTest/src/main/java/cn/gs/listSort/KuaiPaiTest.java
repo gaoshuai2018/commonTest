@@ -1,5 +1,7 @@
 package cn.gs.listSort;
 
+import java.util.Arrays;
+
 /**
  * @Author: gaoshuai
  * @Date: 2018/5/16 15:45
@@ -7,15 +9,13 @@ package cn.gs.listSort;
  */
 public class KuaiPaiTest {
 
-    int[] arr = {6, 1, 2, 7, 9, 3, 4, 5, 10, 8};
-
-    void quickSort(int start, int end) {
-        if (start >= 9 || end <= 0 || start >= end) {
+    public static void quickSort(int start, int end, int[] arr) {
+        if (start >= arr.length - 1 || end <= 0 || start >= end) {
             return;
         }
         int value = arr[start];
-        int j = end;
         int i = start;
+        int j = end;
         while (i != j) {
             for (; j >= 0 && j > i; j--) {
                 if (arr[j] <= value) {
@@ -38,23 +38,16 @@ public class KuaiPaiTest {
         arr[start] = arr[i];
         arr[i] = temp;
 
-        quickSort(start, i - 1);
-        quickSort(i + 1, end);
+        quickSort(start, i - 1, arr);
+        quickSort(i + 1, end, arr);
 
     }
 
 
     public static void main(String[] args) {
-        KuaiPaiTest kuaiPaiTest = new KuaiPaiTest();
-        int arr[] = kuaiPaiTest.arr;
-        for (int num : arr) {
-            System.out.print(num + " ");
-        }
-        System.out.println();
-        kuaiPaiTest.quickSort(0, 9);
-        for (int num : arr) {
-            System.out.print(num + " ");
-        }
-
+        int[] arr = {6, 1, 2, 7, 9, 3, 4, 5, 10, 8, 12, 11};
+        System.out.println(Arrays.toString(arr));
+        quickSort(0, arr.length - 1, arr);
+        System.out.println(Arrays.toString(arr));
     }
 }
