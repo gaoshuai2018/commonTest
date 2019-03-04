@@ -12,7 +12,6 @@ public class SocketAdapter2 implements ThreeSocketTarget2 {
         this.twoSocketAdaptee = twoSocketAdaptee;
     }
 
-    @Override
     public void three() {
         twoSocketAdaptee.two();
     }

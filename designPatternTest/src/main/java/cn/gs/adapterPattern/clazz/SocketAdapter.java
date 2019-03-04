@@ -7,7 +7,6 @@ package cn.gs.adapterPattern.clazz;
  */
 public class SocketAdapter extends TwoSocketAdaptee implements ThreeSocketTarget {
 
-    @Override
     public void three() {
         super.two();
     }

@@ -13,5 +13,6 @@
         <module>usuallyProject</module>
         <module>webProject</module>
         <module>designPatternTest</module>
+        <module>algrithormTest</module>
     </modules>
 </project>
