@@ -12,8 +12,6 @@
         <module>springTest</module>
         <module>usuallyProject</module>
         <module>webProject</module>
-        <module>downImage</module>
+        <module>designPatternTest</module>
     </modules>
-
-
 </project>

@@ -1,11 +1,7 @@
 package cn.gs.test;
 
-import cn.gs.aopService.UserService;
-import cn.gs.service.Greeting;
-import cn.gs.service.GreetingAdvice;
-import cn.gs.service.GreetingImpl;
+import cn.gs.entity.Person;
 import org.junit.Test;
-import org.springframework.aop.framework.ProxyFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -32,6 +28,7 @@ public class AOPTest {
         ApplicationContext ac = new ClassPathXmlApplicationContext("applicationContext.xml");
 //        Greeting greeting = (Greeting)ac.getBean("greetingProxy");
 //        greeting.sayHello("zhangsan");
+        Person person = (Person) ac.getBean("person");
         ((ClassPathXmlApplicationContext) ac).close();
     }
 }

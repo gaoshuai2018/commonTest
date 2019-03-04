@@ -7,9 +7,12 @@ import java.math.BigDecimal;
 import java.nio.charset.StandardCharsets;
 import java.text.DecimalFormat;
 import java.text.Format;
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * @Author: gaoshuai
@@ -32,8 +35,8 @@ public class CommonTest {
 
     @Test
     public void yidongTest() {
-        int a = 800;
-        int b = a >> 3;
+        int a = 160;
+        int b = a >> 2;
         System.out.println(b);
     }
 
@@ -100,6 +103,55 @@ public class CommonTest {
 
         Format f2 = new DecimalFormat("00");
         System.out.println(f2.format(num));
+    }
+
+    /**
+     * 实现字符串多个空格转换一个空格
+     */
+    @Test
+    public void multiSpacesToSpaceTest() {
+        String string = "ab  dd ss   ff     sss  ";
+        Pattern pattern = Pattern.compile("\\s+");
+        Matcher matcher = pattern.matcher(string);
+        String resultString = matcher.replaceAll(" ");
+        System.out.println(resultString);
+
+    }
+
+    /**
+     * 位运算
+     */
+    @Test
+    public void weiTest() {
+        int a = 2 << 3;
+        System.out.println(a);
+    }
+
+
+    @Test
+    public void forListTest() {
+        List<String> stringList = new ArrayList<>();
+        stringList.add("a");
+        stringList.add("b");
+        stringList.add("c");
+        stringList.add("d");
+        stringList.add("e");
+        stringList.add("f");
+
+//        for (int i = 0; i < stringList.size(); i++) {
+//            System.out.println("list size= " + stringList.size());
+//            System.out.println(stringList.get(i));
+//            if ("c".equals(stringList.get(i)))
+//                stringList.remove(stringList.get(i));
+//        }
+
+        for (String s : stringList) {
+            System.out.println(s);
+            if ("c".equals(s)) {
+                stringList.remove(s);
+            }
+        }
+
     }
 
 }

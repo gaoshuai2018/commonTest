@@ -1,13 +1,16 @@
 package cn.gs.dao;
 
-import org.springframework.beans.factory.InitializingBean;
-
 /**
  * @Author: gaoshuai
  * @Date: 2018/5/9 17:17
  * @Version 1.0
  */
-public class HelloDao implements InitializingBean {
+public class HelloDao {
+    public String useName;
+
+    public int userAge;
+
+
     public void setUp() {
         System.out.println("初始化！");
     }
@@ -16,7 +19,7 @@ public class HelloDao implements InitializingBean {
         System.out.println("Hello dao");
     }
 
-    public void destory(){
+    public void destory() {
         System.out.println("销毁了");
     }
 
