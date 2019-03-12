@@ -9,6 +9,7 @@ import java.text.DecimalFormat;
 import java.text.Format;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.regex.Matcher;
@@ -31,13 +32,6 @@ public class CommonTest {
     public void charTest() {
         char ch = '点';
         System.out.println(ch);
-    }
-
-    @Test
-    public void yidongTest() {
-        int a = 160;
-        int b = a >> 2;
-        System.out.println(b);
     }
 
     @Test
@@ -125,6 +119,8 @@ public class CommonTest {
     public void weiTest() {
         int a = 2 << 3;
         System.out.println(a);
+        int b = 160 >> 2;
+        System.out.println(b);
     }
 
 
@@ -138,20 +134,51 @@ public class CommonTest {
         stringList.add("e");
         stringList.add("f");
 
-//        for (int i = 0; i < stringList.size(); i++) {
-//            System.out.println("list size= " + stringList.size());
-//            System.out.println(stringList.get(i));
-//            if ("c".equals(stringList.get(i)))
-//                stringList.remove(stringList.get(i));
-//        }
-
-        for (String s : stringList) {
-            System.out.println(s);
-            if ("c".equals(s)) {
-                stringList.remove(s);
-            }
+        for (int i = 0; i < stringList.size(); i++) {
+            if ("c".equals(stringList.get(i)))
+                stringList.remove(stringList.get(i));
         }
-
     }
 
+    @Test
+    public void foreachListTest() {
+        List<String> stringList = new ArrayList<>();
+        stringList.add("a");
+        stringList.add("b");
+        stringList.add("c");
+        stringList.add("d");
+        stringList.add("e");
+        stringList.add("f");
+
+        for (String s : stringList) {
+            if ("c".equals(s)) {
+                stringList.remove(s); //java.util.ConcurrentModificationException
+            }
+        }
+    }
+
+    @Test
+    public void iteratorListTest() {
+        List<String> stringList = new ArrayList<>();
+        stringList.add("a");
+        stringList.add("b");
+        stringList.add("c");
+        stringList.add("d");
+        stringList.add("e");
+        stringList.add("f");
+        Iterator<String> iterators = stringList.iterator();
+        while (iterators.hasNext()) {
+            String string = iterators.next();
+            System.out.print(string + " ");
+            if (string.equals("a")) {
+                iterators.remove();
+            }
+        }
+        System.out.println();
+        iterators = stringList.iterator();
+        while (iterators.hasNext()) {
+            String string = iterators.next();
+            System.out.print(string + " ");
+        }
+    }
 }

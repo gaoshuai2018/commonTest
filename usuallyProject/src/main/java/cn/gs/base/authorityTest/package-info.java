@@ -1,5 +1,5 @@
 /**
- * @Description:权限测试 public private  default  protected
+ * @Description:权限测试 public default protected private
  * @Author: gaoshuai
  * @Date: 2019/3/3 18:26
  * <p>
