@@ -3,7 +3,7 @@ package cn.gs.base.intergerTest;
 import org.junit.Test;
 
 /**
- * int,Interger比较
+ * int,Integer比较
  */
 //https://blog.csdn.net/chenliguan/article/details/53888018
 //（1）Integer是int的包装类；int是基本数据类型；
@@ -47,7 +47,7 @@ public class IntegerCompareTest {
     // 如果两个变量的值在区间-128到127之间，则比较结果为true，
     // 如果两个变量的值不在此区间，则比较结果为false
     @Test
-    public void integeIntegerTest() {
+    public void integerIntegerTest() {
         Integer t1 = 1;
         Integer t2 = 1;
         System.out.println(t1 == t2); //true
