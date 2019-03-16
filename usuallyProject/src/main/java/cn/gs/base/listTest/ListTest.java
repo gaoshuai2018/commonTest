@@ -1,4 +1,4 @@
-package cn.gs.base;
+package cn.gs.base.listTest;
 
 import cn.gs.entity.Person;
 import cn.gs.entity.User;
