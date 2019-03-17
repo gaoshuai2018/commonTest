@@ -112,18 +112,6 @@ public class CommonTest {
 
     }
 
-    /**
-     * 位运算
-     */
-    @Test
-    public void weiTest() {
-        int a = 2 << 3;
-        System.out.println(a);
-        int b = 160 >> 2;
-        System.out.println(b);
-    }
-
-
     @Test
     public void forListTest() {
         List<String> stringList = new ArrayList<>();
