@@ -23,7 +23,7 @@ public class BinaryTreeErgodic {
         }
     }
 
-    //前序遍历非递归的方式
+    //前序遍历非递归的方式nteger变量实
     public void preOrderNonRecursive(BinaryTreeNode root) {
         Stack<BinaryTreeNode> stack = new Stack<>();
         while (true) {
