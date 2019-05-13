@@ -1,4 +1,4 @@
-package cn.gs.entity;
+package cn.gs.base.entity;
 
 import lombok.Getter;
 import lombok.Setter;

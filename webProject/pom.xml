@@ -16,7 +16,7 @@
         <!-- Java接口和实体类 -->
         <targetJavaProject>${basedir}/src/main/java</targetJavaProject>
         <targetMapperPackage>cn.gs.mapper</targetMapperPackage>
-        <targetModelPackage>cn.gs.entity</targetModelPackage>
+        <targetModelPackage>cn.gs.base.entity</targetModelPackage>
         <!-- XML生成路径 -->
         <targetResourcesProject>${basedir}/src/main/resources</targetResourcesProject>
         <targetXMLPackage>mapper</targetXMLPackage>

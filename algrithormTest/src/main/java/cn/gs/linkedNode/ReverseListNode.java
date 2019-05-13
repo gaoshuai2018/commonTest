@@ -6,9 +6,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @Description:反转单向链表
- * @Author: gaoshuai
- * @Date: 2019/3/28 15:50
+ * @description: 反转单向链表
+ * @author: gaoshuai
+ * @date: 2019/3/28 15:50
  * 来源：https://www.cnblogs.com/edisonchou/p/4769537.html
  * 题目：定义一个函数，输入一个链表的头结点，反转该链表并输出反转后链表的头结点。
  */
@@ -55,7 +55,7 @@ public class ReverseListNode {
 
 
     private static Node reverseNodeList2(Node currentNode) {
-        Node nextNode = null;
+        Node nextNode;
         Node preNode = null;
         while (currentNode != null) {
             nextNode = currentNode.getNext();

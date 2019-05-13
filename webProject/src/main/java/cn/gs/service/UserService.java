@@ -1,6 +1,6 @@
 package cn.gs.service;
 
-import cn.gs.entity.User;
+import cn.gs.base.entity.User;
 
 import java.util.List;
 
@@ -12,8 +12,8 @@ import java.util.List;
 public interface UserService {
     /**
      *
-     * @param userName
-     * @return
+     * @param userName 用户名
+     * @return 用户
      */
     List<User> getUsersByUserName(String userName);
 }

@@ -1,6 +1,6 @@
 package cn.gs.util;
 
-import cn.gs.entity.Person;
+import cn.gs.base.entity.Person;
 import org.junit.Test;
 
 import java.util.HashMap;

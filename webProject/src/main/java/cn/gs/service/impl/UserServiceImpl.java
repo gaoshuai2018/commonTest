@@ -1,6 +1,6 @@
 package cn.gs.service.impl;
 
-import cn.gs.entity.User;
+import cn.gs.base.entity.User;
 import cn.gs.mapper.UserMapper;
 import cn.gs.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;

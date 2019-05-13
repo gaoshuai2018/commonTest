@@ -1,12 +1,12 @@
-package cn.gs.entity;
+package cn.gs.base.entity;
 
 
 import lombok.Data;
 
 /**
- * @Author: gaoshuai
- * @Date: 2018/9/2 22:36
- * @Version 1.0
+ * @author: gaoshuai
+ * @date: 2018/9/2 22:36
+ * @version 1.0
  */
 
 @Data

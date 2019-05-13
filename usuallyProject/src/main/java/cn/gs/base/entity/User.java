@@ -1,11 +1,11 @@
-package cn.gs.entity;
+package cn.gs.base.entity;
 
 import lombok.Data;
 
 /**
- * @Author: gaoshuai
- * @Date: 2018/9/16 10:50
- * @Version 1.0
+ * @author: gaoshuai
+ * @date: 2018/9/16 10:50
+ * @version 1.0
  */
 @Data
 public class User {

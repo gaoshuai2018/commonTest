@@ -26,4 +26,18 @@ public class StringOperationTest {
         String result = string.replaceAll("abc", "123");
         System.out.println(result);
     }
+
+    @Test
+    public void replace2Test(){
+        String string = "$1$||$2$";
+        String result = string.replace("$1$", "123");
+        System.out.println(result);
+    }
+
+    @Test
+    public void subStringTest() {
+        String string = "zhangsan";
+        string = string.substring(1, 2);
+        System.out.println(string);
+    }
 }

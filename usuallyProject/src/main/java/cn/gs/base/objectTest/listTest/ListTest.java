@@ -1,7 +1,7 @@
 package cn.gs.base.objectTest.listTest;
 
-import cn.gs.entity.Person;
-import cn.gs.entity.User;
+import cn.gs.base.entity.Person;
+import cn.gs.base.entity.User;
 import org.junit.Test;
 
 import java.util.ArrayList;

@@ -1,6 +1,5 @@
-package cn.gs.entity;
+package cn.gs.base.entity;
 
-import cn.gs.service.PersonService;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 

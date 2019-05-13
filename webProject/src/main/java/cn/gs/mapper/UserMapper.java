@@ -1,6 +1,6 @@
 package cn.gs.mapper;
 
-import cn.gs.entity.User;
+import cn.gs.base.entity.User;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
