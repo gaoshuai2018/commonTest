@@ -1,4 +1,4 @@
-package cn.gs.base.objectTest.mapTest;
+package cn.gs.base.objectTest.collectionsTest.mapTest;
 
 import org.junit.Test;
 
@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @Description:
+ * @Description: map测试
  * @Author: gaoshuai
  * @Date: 2019/3/28 9:55
  */

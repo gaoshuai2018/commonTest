@@ -3,7 +3,7 @@ package cn.gs.base.test.mathTest;
 import org.junit.Test;
 
 /**
- * @Description:
+ * @Description: 平方根测试
  * @Author: gaoshuai
  * @Date: 2019/3/29 10:21
  */

@@ -1,4 +1,4 @@
-package cn.gs.base.objectTest.listTest;
+package cn.gs.base.objectTest.collectionsTest;
 
 import cn.gs.base.entity.Person;
 import cn.gs.base.entity.User;
@@ -19,7 +19,7 @@ import java.util.TreeSet;
  * @Date: 2018/9/12 16:35
  * @Version 1.0
  */
-public class ListTest {
+public class CollectionsTest {
 
     @Test
     public void containsTest() {
