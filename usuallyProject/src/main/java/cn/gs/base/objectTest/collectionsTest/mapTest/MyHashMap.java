@@ -7,7 +7,7 @@ package cn.gs.base.objectTest.collectionsTest.mapTest;
  */
 public class MyHashMap<K, V> {
 
-    private static int default_length = 4;
+    private static int default_length = 16;
     private MyEntry<K, V>[] entries;
 
 
@@ -55,7 +55,7 @@ public class MyHashMap<K, V> {
     }
 
     public static void main(String[] args) {
-        MyHashMap mhm = new MyHashMap();
+        MyHashMap<String, Object> mhm = new MyHashMap();
         mhm.put("lmy", 20);
         mhm.put("lmy1", 21);
         mhm.put("lmy2", 22);
