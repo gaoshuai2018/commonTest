@@ -27,9 +27,6 @@ public class RandomTest {
     public void testRandomLength() {
         //随机数长度
         int length = 2;
-        if (length <= 0) {
-            length = 1;
-        }
         StringBuilder res = new StringBuilder();
         Random random = new Random();
         int i = 0;
@@ -39,4 +36,31 @@ public class RandomTest {
         }
         System.out.println(res);
     }
+
+
+    @Test
+    public void randomSeed() {
+        System.out.println("Random不设置种子：");
+        for (int i = 0; i < 5; i++) {
+            Random random = new Random();
+            for (int j = 0; j < 10; j++) {
+                System.out.print(" " + random.nextInt(100) + ", ");
+            }
+            System.out.println();
+        }
+
+        System.out.println();
+
+        System.out.println("Random设置种子：");
+        for (int i = 0; i < 5; i++) {
+            Random random = new Random();
+            random.setSeed(100);
+            // 15,  50,  74,  88,  91,  66,  36,  88,  23,  13,
+            for (int j = 0; j < 10; j++) {
+                System.out.print(" " + random.nextInt(100) + ", ");
+            }
+            System.out.println();
+        }
+    }
+
 }
