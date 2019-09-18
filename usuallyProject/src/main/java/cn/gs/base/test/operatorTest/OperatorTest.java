@@ -1,4 +1,4 @@
-package cn.gs.base.test.OperatorTest;
+package cn.gs.base.test.operatorTest;
 
 import org.junit.Test;
 

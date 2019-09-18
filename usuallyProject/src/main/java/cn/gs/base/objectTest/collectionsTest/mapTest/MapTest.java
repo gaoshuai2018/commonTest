@@ -19,4 +19,24 @@ public class MapTest {
         Object secondValue = map.put("abc", 456);
         System.out.println(secondValue);
     }
+
+    @Test
+    public void copyTest() {
+        Map<String, Object> map = new HashMap<>();
+        map.put("name", "zhangsan");
+        Map<String, Object> temp = map;
+        temp.put("name", "li");
+        System.out.println(map);
+    }
+
+    @Test
+    public void copy2Test() {
+        Map<String, Object> map = new HashMap<>();
+        map.put("name", "zhangsan");
+        Map<String, Object> temp = new HashMap<>();
+        temp.putAll(map);
+        temp.put("name", "li");
+        System.out.println(map);
+        System.out.println(temp);
+    }
 }

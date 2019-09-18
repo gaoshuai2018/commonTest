@@ -1,4 +1,4 @@
-package cn.gs.base.objectTest.threadTest;
+package cn.gs.base.objectTest.threadTest.threadPool;
 
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;

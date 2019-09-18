@@ -7,6 +7,7 @@ import java.math.BigDecimal;
 import java.nio.charset.StandardCharsets;
 import java.text.DecimalFormat;
 import java.text.Format;
+import java.text.MessageFormat;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Iterator;
@@ -35,7 +36,7 @@ public class CommonTest {
     }
 
     @Test
-    public void changduTest() {
+    public void lengthTest() {
         String str = "sss";
         System.out.println(str.length());
         String[] strings = new String[]{"22", "22"};
@@ -123,8 +124,9 @@ public class CommonTest {
         stringList.add("f");
 
         for (int i = 0; i < stringList.size(); i++) {
-            if ("c".equals(stringList.get(i)))
+            if ("c".equals(stringList.get(i))) {
                 stringList.remove(stringList.get(i));
+            }
         }
     }
 
@@ -140,7 +142,8 @@ public class CommonTest {
 
         for (String s : stringList) {
             if ("c".equals(s)) {
-                stringList.remove(s); //java.util.ConcurrentModificationException
+                //java.util.ConcurrentModificationException
+                stringList.remove(s);
             }
         }
     }
@@ -158,7 +161,7 @@ public class CommonTest {
         while (iterators.hasNext()) {
             String string = iterators.next();
             System.out.print(string + " ");
-            if (string.equals("a")) {
+            if ("a".equals(string)) {
                 iterators.remove();
             }
         }
@@ -169,4 +172,29 @@ public class CommonTest {
             System.out.print(string + " ");
         }
     }
+
+    @Test
+    public void messageFormatTest() {
+        String responseTemplate = "'{'code:\"{0}\",des:\"{1}\"'}'";
+        System.out.println(MessageFormat.format(responseTemplate, "w1", "w2"));
+        String responseTemplate2 = "'{'code:''{0}'',des:''{1}'''}'";
+        System.out.println(MessageFormat.format(responseTemplate2, "w1", "w2"));
+        String template3 = " \''{print $1}\'' | {0}";
+        System.out.println(MessageFormat.format(template3, "abc"));
+    }
+
+    @Test
+    public void startWithTest() {
+        String source = "";
+        String target = "abc";
+        System.out.println(target.startsWith(source));
+    }
+    @Test
+    public void matchesTest(){
+        String str = "ABc";
+        String reg = "(?i)abc";
+        System.out.println(str.matches(reg));
+    }
+
+
 }

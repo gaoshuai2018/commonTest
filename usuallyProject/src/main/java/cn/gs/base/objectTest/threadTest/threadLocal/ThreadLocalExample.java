@@ -1,4 +1,4 @@
-package cn.gs.base.objectTest.threadTest;
+package cn.gs.base.objectTest.threadTest.threadLocal;
 
 import java.text.SimpleDateFormat;
 import java.util.Random;
