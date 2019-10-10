@@ -102,7 +102,7 @@ public class CommonTest {
 
     /**
      * 实现字符串多个空格转换一个空格
-     */
+7     */
     @Test
     public void multiSpacesToSpaceTest() {
         String string = "ab  dd ss   ff     sss  ";
