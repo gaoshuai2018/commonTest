@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+
+    <script type="text/javascript" th:src="@{/js/jquery-2.1.1.min.js}"></script>
+    <!--    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js"></script>-->
+    <script>
+        function myFun() {
+            alert("message");
+            $.ajax({
+                type: "post",
+                url: "/test/ajax",
+                contentType: "application/json;charset=utf-8",
+                data: '{"id":"1","name":"asd","password":"abc"}',
+                dataType: "json", // 这里声明收到的服务器的响应数据类型，如果是json的话，不声明也可以正常使用
+                success: function (data) {
+                    //响应成功后回调函数
+                    alert("收到响应");
+                    $("#r").html(JSON.stringify(data)); //这里将json转为字符串显示(data其实是个object,不转换的话会显示为一片空白)
+                },
+                error: function () {
+                    alert("error");
+                }
+
+            });
+        }
+
+        function returnNothing() {
+            $.ajax({
+                type: "post",
+                url: "/test/nothing",
+                contentType: "application/json;charset=utf-8",
+                // data: '{"id":"1","name":"asd","password":"abc"}',
+                // dataType: "json",
+                success: function (data) {
+                    //响应成功后回调函数
+                    alert("收到响应");
+                    $("#r").html(data); //这里将json转为字符串显示(data其实是个object,不转换的话会显示为一片空白)
+                },
+                error: function () {
+                    alert("error");
+                }
+
+            });
+        }
+    </script>
+
+</head>
+<body>
+
+
+<button id="btn" type="button" onclick="myFun()">Click Me!</button>
+<p id="r"></p>
+<button id="btn1" type="button" onclick="returnNothing()">ClickMe!</button>
+</body>
+</html>

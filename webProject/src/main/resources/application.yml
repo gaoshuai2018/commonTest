@@ -20,6 +20,8 @@ spring:
     poolPreparedStatements: true
     maxOpenPreparedStatements: 20
 
+  thymeleaf:
+    cache: false
 mybatis:
   mapper-locations: classpath:mapper/*Mapper.xml  #注意：一定要对应mapper映射xml文件的所在路径
 #  type-aliases-package: cn.gs.entity  # 注意：对应实体类的路径\
