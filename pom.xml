@@ -14,6 +14,7 @@
         <module>webProject</module>
         <module>designPatternTest</module>
         <module>algrithormTest</module>
+        <module>shellTest</module>
     </modules>
 
     <build>

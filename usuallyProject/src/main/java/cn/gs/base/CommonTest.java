@@ -102,7 +102,7 @@ public class CommonTest {
 
     /**
      * 实现字符串多个空格转换一个空格
-7     */
+     */
     @Test
     public void multiSpacesToSpaceTest() {
         String string = "ab  dd ss   ff     sss  ";
@@ -189,8 +189,9 @@ public class CommonTest {
         String target = "abc";
         System.out.println(target.startsWith(source));
     }
+
     @Test
-    public void matchesTest(){
+    public void matchesTest() {
         String str = "ABc";
         String reg = "(?i)abc";
         System.out.println(str.matches(reg));

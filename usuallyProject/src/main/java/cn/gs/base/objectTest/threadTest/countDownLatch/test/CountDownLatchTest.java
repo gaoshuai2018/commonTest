@@ -9,7 +9,7 @@ import java.util.concurrent.CountDownLatch;
  */
 public class CountDownLatchTest {
 
-public static void main(String[] args) {
+    public static void main(String[] args) {
         //创建2个点的CountDownLatch对象
         CountDownLatch countDownLatch = new CountDownLatch(2);
 
@@ -20,13 +20,13 @@ public static void main(String[] args) {
         workThread2.start();
 
         try {
-        //调用await方法阻塞当前线程，等待子线程完成后在继续执行
-        countDownLatch.await();
+            //调用await方法阻塞当前线程，等待子线程完成后在继续执行
+            countDownLatch.await();
         } catch (InterruptedException e) {
-        e.printStackTrace();
+            e.printStackTrace();
         }
 
         System.out.println("run next process.");
-        }
+    }
 
-        }
+}
